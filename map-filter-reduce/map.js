@@ -34,3 +34,22 @@ const fullname= users.map((user)=>{
     return user.firstName +" "+ user.lastName;
 })
 console.log(fullname);
+
+console.log("--------------------------------------------")
+const object = {
+    a: 1,
+    b: 2,
+    c: 3,
+  };
+  
+  const array = Object.entries(object);
+  console.log(array); // [['a', 1], ['b', 2], ['c', 3]]
+  
+  //map takes three arguments 1) the value of the current element 2) the index o current elelemnt 3) the array itself
+  const newArray = array.map((value, index, array)=>{
+    //console.log(array[index][1])
+     array[index][1]= array[index][1]*2;
+     return value;
+  })
+  console.log(newArray); // [['a', 2], ['b', 4], ['c', 6]]
+

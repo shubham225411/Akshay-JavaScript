@@ -1,22 +1,14 @@
-// filter fuction is basically used to filter out the values
-// suppose filter out all the odd/even values from the array
-
-const arr =[1,2,3,4,5,6]
-
-const filteredArr= arr.filter((x)=>{
-    if(x%2===0){
-        return x;
-    }
-})
-const modify = arr.filter((x)=>{
+const arr= [1,2,3,4,5];
+const new_arr= arr.map((x)=>{
     if(x===1){
-        return 
+        return x=2;
     }
     return x;
 })
-console.log(modify);// you will expect answer [2,2,3....] but still the answer will be same as original array
-// its bcz the filter cant modify the original array
-console.log(filteredArr);
+
+console.log(new_arr);
+console.log(arr);//the array is not modified the objects in the array is getting modified bvz aobjects are refrenced based
+
 
 const users = [
     {firstName:"Shubham", lastName:"Kumar", age:24},
