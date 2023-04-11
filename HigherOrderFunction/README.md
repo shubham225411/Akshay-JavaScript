@@ -1,0 +1,1 @@
+is section maai phle index.js ko samjho, phir uska optimized version dekhne ke liye optimized.js ko dekho
