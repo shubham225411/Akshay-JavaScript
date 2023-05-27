@@ -1,0 +1,1 @@
+first go through script.js and then this.js

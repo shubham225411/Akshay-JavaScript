@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        div{
+            border: 1px solid black;
+        }
+        #grandParent{
+            height: 100px;
+            width: 100px;
+            padding: 10px 10px;
+            margin: 200px 200px;
+            scale: 1.8;
+        }
+        #parent{
+            height: 80px;
+            width: 80px;
+            padding: 10px 10px;
+        }
+        #child{
+            height: 70px;
+            width: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div id="grandParent" >
+        <div id="parent" >
+            <div id="child">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        let grandParent = document.getElementById("grandParent");
+        let parent = document.getElementById("parent");
+        let child = document.getElementById("child");
+
+        let divs = document.getElementsByTagName("div")
+        for (div of divs){
+            div.addEventListener("click", (ele)=>{
+                console.log(ele.target.id + "clicked")
+            });// to addeventlistener we pass three parameters 1) event 2) function 
+            //3) add capture(false by default, it captures the events from parent -> child, while event bubbling is 
+            // child -> parent)
+        }
+
+    </script>
+</body>
+</html>
